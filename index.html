@@ -1,29 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Git darslari takror</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#">MySite</a>
+      <nav class="nav-links">
+        <a href="#home">Bosh sahifa</a>
+        <a href="#form">Forma</a>
+        <a href="#about">Haqida</a>
+      </nav>
+    </div>
+  </header>
 
-  <h3>Formani toldiring</h3>
+  <main id="home" class="container">
+    <h1 class="page-title">Git darslari takror</h1>
 
-  <!--Ism-->
-  <label for="ism">Ismingiz</label><br>
-  <input type="text" id="ism"><br><br>
+    <!-- FORM CARD -->
+    <section id="form" class="card">
+      <h3>Formani to‘ldiring</h3>
+      <form action="#" method="post">
+        <!-- Ism -->
+        <label for="ism">Ismingiz</label>
+        <input type="text" id="ism" name="ism" placeholder="Ali" required>
+
+        <!-- Familya -->
+        <label for="familya">Familya</label>
+        <input type="text" id="familya" name="familya" placeholder="Valiyev" required>
+
+        <!-- Tugma -->
+        <button type="submit">Yuborish</button>
+      </form>
+    </section>
 
 
-  <!--Familya-->
-  <label for="familya">Familya</label><br>
-  <input type="text" id="familya"><br><br>
+  </main>
 
-  <!--Button-->
-  <button type="submit">Yuborish</button>
-
-
-  
-  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 MySite — Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
 </body>
 </html>

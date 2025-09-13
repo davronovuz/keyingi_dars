@@ -1,23 +1,120 @@
-h3 {
-  color :red;
+/* --- Eng sodda bazaviy stillar --- */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #f7f7f8;
 }
 
-input {
-  padding: 8px 10px;
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-title {
+  margin: 100px 0 16px; /* navbardan pastroqda ko‘rinishi uchun */
+  font-size: 22px;
+}
+
+/* --- Navbar --- */
+.navbar {
+  position: sticky; /* skrollda tepada turadi, fixed emas – osonroq */
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.brand {
+  font-weight: 800;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  text-decoration: underline;
+}
+
+/* --- Card (blok) --- */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+/* --- Forma --- */
+h3 { color: #ef4444; margin-top: 0; }
+
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
 }
 
 label {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.25);
 }
 
 button {
-  padding: 8px 10px;
+  padding: 10px 12px;
   background-color: aquamarine;
+  border: 0;
   border-radius: 6px;
-  transition: all 0.3 ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
-button:hover{
-    background-color: rgb(54, 182, 139);
+button:hover {
+  background-color: rgb(54, 182, 139);
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 32px;
+  padding: 16px 0;
+  background: #111827;
+  color: #e5e7eb;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* --- Kichik ekranlar uchun (ixtiyoriy, juda sodda) --- */
+@media (max-width: 480px) {
+  .nav-links a { margin-left: 8px; }
+  .page-title { margin-top: 80px; }
 }
